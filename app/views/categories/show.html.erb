@@ -1,0 +1,8 @@
+
+<div>
+  <% @category.articles.each do |article|%>
+  <ul>
+    <li><%= link_to "#{article.title}", category_article_path(article) %></li>
+  </ul>
+  <% end %>
+</div>
