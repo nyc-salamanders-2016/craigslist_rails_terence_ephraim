@@ -2,7 +2,9 @@
 <div>
   <% @category.articles.each do |article|%>
   <ul>
-    <li><%= link_to "#{article.title}", category_article_path(article) %></li>
+    <li><%= link_to "#{article.title}", category_article_path(@category, article) %></li>
   </ul>
   <% end %>
+
+  <%= link_to "Create new article", new_category_article_path(@category) %>
 </div>

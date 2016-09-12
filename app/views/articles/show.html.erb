@@ -1,0 +1,12 @@
+<% if @link %>
+  <p> Here is your link to edit your post:</p>
+  <%= link_to @link, "/categories/#{@category.id}/articles/#{@article.id}/edit?key=#{@article.link}" %>
+<% end %>
+
+<h2><%= @article.title %></h2>
+<p>
+<%= @article.body %><br>
+
+<%= @article.price %><br>
+<%= @article.email %><br>
+</p>
