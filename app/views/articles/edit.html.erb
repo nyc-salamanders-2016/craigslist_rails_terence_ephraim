@@ -1,4 +1,4 @@
-<%= form_for([@category, @article]) do |f| %>
+<%= form_for [@category, @article] do |f| %>
 
   <% if @article.errors.any? %>
     <div id="error_explanation">
@@ -40,3 +40,9 @@
   </p>
 
 <% end %>
+
+<p>
+  <%= link_to 'Delete Post', [@category, @article],
+               method: :delete,
+               data: { confirm: 'Are you sure?' } %>
+</p>
